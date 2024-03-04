@@ -1,0 +1,317 @@
+/**
+ * @customfunction
+ */
+
+function MiCtaPla(CtaPla: string) {
+  let strResultado = ""; // Inicializar la variable dentro de la función
+
+  switch (CtaPla) {
+    case "INGRESOS DE OBREROS":
+    case "INGRESOS DE EMPLEADOS":
+    case "LIQUIDACION DE CTS CON EFECTO CANCELATORIO":
+      strResultado = "0";
+      break;
+
+    case "EGRESOS":
+    case "CTACTE DE OBREROS":
+    case "CTACTE DE EMPLEADOS":
+      strResultado = "1";
+      break;
+
+    case "APORTES DEL EMPLEADOR":
+      strResultado = "2";
+      break;
+
+    //ESPECIAL PARA EDILSON Y MONTALVO
+    case "VAC LAUDO ARBITRAL 2018 1106655":
+    case "VAC OBR PACTOS COLECTIVOS 1106655":
+    case "VAC OBR REMUNERACION BASICA 1106655":
+      strResultado = "0118";
+      break;
+
+    case "INC PACTO COLEC 905149":
+    case "LAUDO ARBITRAL 2018 905149":
+    case "REM. BASICO EMP. 905149":
+    case "REM. BASICA OBRERO 1106655":
+    case "INC PACTO COLEC 1106655":
+    case "LAUDO ARBITRAL 2018 1106655":
+    case "LAUDO ARBITRAL 2022 905149":
+    case "LAUDO ARBITRAL 2022 1106655":
+      strResultado = "0121";
+      break;
+
+    case "VAC OBR ASIGNACION FAMILIAR LEY 25129 1106655":
+    case "ASIGNACION FAMILIAR LEY N 25129 905149":
+    case "ASIGNACION FAMILIAR LEY N 25129 1106655":
+      strResultado = "0201";
+      break;
+
+    case "HORARIO NOCTURNO 1106655":
+    case "PRODUCTOS QUIMICOS 1106655":
+    case "VAC OBR BONIFICACION CONSOLIDADA RM 1106655":
+    case "BONIF. CONSOLIDADA R.M 075-99-EF 905149":
+    case "INSUMOS QUIMICOS 905149":
+    case "BONIF. CONSOLIDADA R.M 075-99-EF 1106655":
+    case "VAC OBR INC AFP 10.23% 1106655":
+    case "INC. AFP 10.23% 905149":
+    case "INC. AFP 10.23% OBR. 1106655":
+    case "VAC OBR INC AFP 3% 1106655":
+    case "INC. BONIF. DL. 25897 AFP 3% 905149":
+    case "INC. AFP 3% OBR. 1106655":
+    case "BONIFICACION MOVILIDAD LAUDO 2022 905149":
+      strResultado = "0306";
+      break;
+
+    case "SEGURO IPSS VIDA 1106655":
+    case "SEGURO IPSS VIDA 905149":
+      strResultado = "0604";
+      break;
+
+    case "SISTEMA NACIONAL DE PENSIONES 1106655":
+    case "SISTEMA NACIONAL DE PENSIONES 905149":
+      strResultado = "0607";
+      break;
+
+    case "DESCUENTO SINDICAL FP 1106655":
+    case "DESCUENTO SINDICAL FP 905149":
+      strResultado = "0702";
+      break;
+
+    case "MAPFRE PERU 1106655":
+      strResultado = "0706";
+      break;
+
+    case "IMPUESTO A LA RENTA 5TA CATEGORIA 1106655":
+    case "IMPUESTO A LA RENTA 5TA CATEGORIA 905149":
+      strResultado = "0605";
+      break;
+
+    case "ESSALUD 1106655":
+    case "ESSALUD 905149":
+      strResultado = "ESSALUD";
+      break;
+
+    case "IGV 18% SEGURO COMPLEM. RIESGO 1106655":
+    case "SEGURO COMPLEMENTARIO DE RIESGO 1106655":
+    case "IGV 18% SEGURO COMPLEM. RIESGO 905149":
+    case "SEGURO COMPLEMENTARIO DE RIESGO 905149":
+      strResultado = "SCTR";
+      break;
+
+    case "ASIC VAC ASIG FAMILIAR LEY 25129 905149":
+    case "ASIC VAC EMPLEADOS INC. AFP 10.23 % 905149":
+    case "ASIC VAC INC. AFP 3 % 905149":
+    case "ASIC VAC PACTO COLECT. 905149":
+    case "ASIG VAC BONIFICACION CONSOLIDADA RM 905149":
+    case "ASIG VAC REMUNERACION BASICA 905149":
+    case "ASIG. VAC LAUDO ARBITRAL 2022 905149":
+    case "ASIG. VAC. LAUDO ARB.2018 905149":
+      strResultado = "0210";
+      break;
+
+    case "BONIF. POR ESCOLARIDAD 905149":
+    case "BONIF. POR ESCOLARIDAD 1106655":
+      strResultado = "2009";
+      break;
+
+    //===============================================================
+
+    case "REINT. AFP PROFUTURO":
+    case "REINT. AFP COM. PROF. MIXTA.":
+    case "REINT. AFP INTEGRA":
+    case "REINT. AFP PRIMA":
+    case "REINT. AFP HABITAT":
+    case "REINT. ASIG. POR ENCARGATURA":
+      strResultado = "0312";
+      break;
+    // NO INGRESA A BASE IMPONIBLE
+
+    case "INC. AFP 10.23% OBR.":
+    case "INC. AFP 10.23%":
+      strResultado = "0109";
+      break;
+
+    case "INC. AFP 3% OBR.":
+    case "INC. BONIF. DL. 25897 AFP 3%":
+      strResultado = "0110";
+      break;
+
+    case "VAC EMP REMUNERACION BASICA":
+    case "VAC OBR REMUNERACION BASICA":
+    case "VAC EMP PACTOS COLECTIVOS":
+    case "VAC OBR PACTOS COLECTIVOS":
+    case "VAC LAUDO ARBITRAL 2018":
+    case "VAC. LAUDO ARBITRAL 2012":
+    case "VAC. EMP. ENCARGATURA":
+    case "VAC OBR ASIGNACION FAMILIAR LEY 25129":
+    case "VAC EMP ASIGNACION FAMILIAR LEY 25129":
+    case "VAC OBR PRODUCTOS QUIMICOS":
+    case "VAC OBR AGUAS SERVIDAS":
+    case "VAC EMP INC.AFP 10.23 %":
+    case "VAC OBR INC AFP 10.23%":
+    case "VAC OBR INC AFP 3%":
+    case "VAC EMP INC.AFP 3 %":
+    case "VAC OBR BONIFICACION CONSOLIDADA RM":
+    case "VAC EMP BONIFICACION CONSOLIDADA RM":
+    case "VAC LAUDO ARBITRAL 2022":
+    case "VAC. EMP. ASIG. RIESGO DE CAJA Y VALORES":
+    case "VAC. EMP. D.L. 26504":
+      strResultado = "0118";
+      break;
+
+    case "REM. BASICO EMP.":
+    case "REM. BASICA OBRERO":
+    case "ASIGNACION POR ENCARGATURA":
+    case "INC PACTO COLEC":
+    case "LAUDO ARBITRAL 2018":
+    case "LAUDO ARBITRAL 2012":
+    case "DIF.AL D.S. N 004-2018-TR INCR. RMV":
+    case "LAUDO ARBITRAL 2022":
+      strResultado = "0121";
+      break;
+
+    case "ASIGNACION FAMILIAR LEY N25129":
+    case "ASIGNACION FAMILIAR LEY N 25129":
+    case "REINT. ASIG. FAMILIAR OBRERO":
+    case "REINTEGRO A. FAMILIAR LEY NÂº 25129":
+      strResultado = "0201";
+      break;
+
+    case "ASIG. VAC. LAUDO ARB.2018":
+    case "ASIG VAC. REM. BASICO OBR.":
+    case "ASIG VAC PRODUCTOS QUIMICOS":
+    case "ASIG VAC. PACTOS COLECTIVOS":
+    case "ASIC VAC AGUAS SERVIDAS":
+    case "ASIG. VAC. LAUDO 2012":
+    case "ASIC VAC PACTOS COLECTIVOS":
+    case "ASIG VAC REMUNERACION BASICA":
+    case "ASIG VAC ENCARGATURA":
+    case "ASIC VAC PACTO COLECT.":
+    case "ASIC VAC INC. AFP 3 %":
+    case "ASIC VAC OBREROS INC. AFP 10.23 %":
+    case "ASIGNAC.VAC.RIESGO CAJA":
+    case "ASIG VAC BONIFICACION CONSOLIDADA RM":
+    case "ASIC VAC EMPLEADOS INC. AFP 10.23 %":
+    case "ASIC VAC ASIG FAMILIAR LEY 25129":
+    case "ASIG VAC ASIG FAMILIAR LEY 25129":
+    case "ASIG. VAC. BONIFIC. D.L.NÂº 26504 3.3%":
+    case "ASIG. VAC LAUDO ARBITRAL 2022":
+      strResultado = "0210";
+      break;
+
+    case "ASIG. MOVILIDAD 2018":
+    case "BONIF. CONSOLIDADA R.M 075-99-EF":
+    case "AGUAS SERVIDAS":
+    case "HORARIO NOCTURNO":
+    case "PRODUCTOS QUIMICOS":
+    case "INSUMOS QUIMICOS":
+    case "ASIGNAC. RIESGO CAJA":
+    case "HORAS NOCTURNAS":
+    case "REINTEGRO PRODUCTOS QUIMICOS":
+    case "BONIFICACION D.L 26504 3.3%":
+    case "REINT. DE HORARIO NOCTURNO":
+    case "REINT. POR DSCT. PARAISO ETERNO":
+    case "BONIFICACION MOVILIDAD LAUDO 2022":
+    case "REINTEGRO AGUAS SERVIDAS":
+    case "REINT. AFP COM. PROF. MIXTA.":
+    case "REINT. BONIF. MOVILIDAD LAUDO 2022":
+      strResultado = "0306";
+      break;
+
+    case "AFP COMISION VARIABLE":
+    case "AFP COMISION VARIABLE 905149":
+    case "AFP COMISION VARIABLE 1106655":
+      strResultado = "0601";
+      break;
+
+    case "SEGURO IPSS VIDA":
+      strResultado = "0604";
+      break;
+
+    case "IMPUESTO A LA RENTA 5TA CATEGORIA":
+      strResultado = "0605";
+      break;
+
+    case "AFP PRIMA SEGURO":
+      strResultado = "0606";
+      break;
+
+    case "SISTEMA NACIONAL DE PENSIONES":
+      strResultado = "0607";
+      break;
+
+    case "AFP 10% FONDO DE PENSIONES":
+      strResultado = "0608";
+      break;
+
+    case "DESCUENTO SINDICAL FP":
+    case "DESCUENTO SINDICAL EMP":
+      strResultado = "0702";
+      break;
+
+    case "RETENCION JUDICIAL FIJO":
+    case "RETENCION JUDICIAL 23%":
+    case "RETENCION JUDICIAL 30%":
+    case "RETENCION JUDICIAL 50%":
+    case "RETENCION JUDICIAL 45%":
+    case "RETENCION JUDICIAL 27%":
+    case "RETENCION JUDICIAL EL 60% REM. TOTALES":
+    case "RETENCION JUDICIAL 20%":
+    case "RETENCION JUDICIAL 40% TOT. REM.":
+    case "RETENCION JUDICIAL 1ER 25%":
+    case "RETENCION JUDICIAL 2DO 25%":
+      strResultado = "0703";
+      break;
+
+    case "DCTOS. A FAVOR DE PARAISO ETERNO":
+    case "DCTO. A FAVOR (POSITIVA VIDA), SEG. Y REASEGUROS":
+    case "DCTO. A FAVOR (POSITIVA VIDA) SEG. Y REASEGUROS":
+    case "BANCO PICHINCHA":
+    case "SEGURO VIDA (RIMAC)":
+    case "FALTAS Y TARDANZAS":
+    case "PERMISO PERSONAL":
+    case "COOPERATIVA SAN MARTIN DE PORRES":
+    case "CAJA MUNICIPAL PIURA":
+    case "PERMISO PEWRSONAL":
+    case "DESCUENTO POR NO RENDIR VIATICOS OBRERO":
+    case "MAPFRE PERU":
+    case "DESCUENTO POR NO RENDIR VIATICOS EMPLEADO":
+    case "BANBIF":
+    case "DESCUENTOS PARA UNIFORMES DEPORTIVOS":
+    case "DSCTO. POR SATT":
+    case "DCTO. ACTIVIDAD ANIVERSARIO":
+    case "DSCTO. ASIGNACION FAMILIAR":
+    case "RESP. PAPELETA INFRACC. X COND. SIN LICENCIA":
+    case "APORTES A ESSALUD EL 9%":
+    case "DESC.PAGO INDEBIDO":
+      strResultado = "0706";
+      break;
+
+    case "DCTO. IND. ASIG. X ENCARGATURA":
+      strResultado = "0707";
+      break;
+
+    case "POR LIQUIDAR CTS":
+      strResultado = "0904";
+      break;
+
+    case "BONIF. POR ESCOLARIDAD":
+      strResultado = "2009";
+      break;
+
+    case "ESSALUD":
+      strResultado = "ESSALUD";
+      break;
+
+    case "SEGURO COMPLEMENTARIO DE RIESGO":
+    case "IGV 18% SEGURO COMPLEM. RIESGO":
+      strResultado = "SCTR";
+      break;
+
+    case "ESSALUD 4%":
+      strResultado = "PREVISIONAL";
+      break;
+  }
+
+  return strResultado;
+}
