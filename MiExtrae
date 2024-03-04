@@ -1,0 +1,9 @@
+/**
+ * @customfunction
+ **/
+
+function MiExtae(Deta: string): string {
+  const regex = /^(.*?)\s/;
+  const match = regex.exec(Deta);
+  return match ? match[1] : "";
+}
