@@ -1,0 +1,27 @@
+/**
+ * @customfunction
+ **/
+
+function MiCtaPlaR(CtaPla: string): string {
+  const entrada = listaCtaPlaR.find((item) => item.clave === CtaPla);
+  return entrada ? entrada.valor : "";
+}
+
+const listaCtaPlaR = [
+  { clave: "VAC LAUDO ARBITRAL 2018", valor: "VACA" },
+  { clave: "VAC LAUDO ARBITRAL 2022", valor: "VACA" },
+  { clave: "VAC EMP PACTOS COLECTIVOS", valor: "VACA" },
+  { clave: "VAC OBR PACTOS COLECTIVOS", valor: "VACA" },
+  { clave: "VAC OBR REMUNERACION BASICA", valor: "VACA" },
+  { clave: "VAC EMP REMUNERACION BASICA", valor: "VACA" },
+  { clave: "VAC. LAUDO ARBITRAL 2012", valor: "VACA" },
+
+  { clave: "REM. BASICO EMP.", valor: "REM.BASICA" },
+  { clave: "REM. BASICA OBRERO", valor: "REM.BASICA" },
+  { clave: "ASIGNACION POR ENCARGATURA", valor: "REM.BASICA" },
+  { clave: "INC PACTO COLEC", valor: "REM.BASICA" },
+  { clave: "LAUDO ARBITRAL 2018", valor: "REM.BASICA" },
+  { clave: "LAUDO ARBITRAL 2012", valor: "REM.BASICA" },
+  { clave: "DIF.AL D.S. N 004-2018-TR INCR. RMV", valor: "REM.BASICA" },
+  { clave: "LAUDO ARBITRAL 2022", valor: "REM.BASICA" }
+];
