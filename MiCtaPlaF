@@ -1,0 +1,57 @@
+/**
+ * @customfunction
+ **/
+
+function MiCtaPlaF(CtaPla: string): string {
+  const entrada = listaCtaPlaF.find((item) => item.clave === CtaPla);
+  return entrada ? entrada.valor : "";
+}
+
+const listaCtaPlaF = [
+  //BASICO
+  { clave: "VAC OBR REMUNERACION BASICA", valor: "REM BAS" },
+  { clave: "VAC EMP REMUNERACION BASICA", valor: "REM BAS" },
+  { clave: "REM. BASICO EMP.", valor: "REM BAS" },
+  { clave: "REM. BASICA OBRERO", valor: "REM BAS" },
+
+  { clave: "ASIGNACION POR ENCARGATURA", valor: "ENCARGA" },
+  { clave: "VAC. EMP. ENCARGATURA", valor: "ENCARGA" },
+
+  { clave: "VAC EMP PACTOS COLECTIVOS", valor: "PAC COLEC" },
+  { clave: "VAC OBR PACTOS COLECTIVOS", valor: "PAC COLEC" },
+  { clave: "INC PACTO COLEC", valor: "PAC COLEC" },
+
+  { clave: "VAC. LAUDO ARBITRAL 2012", valor: "LAUDO 2012" },
+  { clave: "LAUDO ARBITRAL 2012", valor: "LAUDO 2012" },
+  { clave: "VAC LAUDO ARBITRAL 2018", valor: "LAUDO 2018" },
+  { clave: "LAUDO ARBITRAL 2018", valor: "LAUDO 2018" },
+  { clave: "VAC LAUDO ARBITRAL 2022", valor: "LAUDO 2022" },
+  { clave: "LAUDO ARBITRAL 2022", valor: "LAUDO 2022" },
+
+  //OTROS INGRESOS FIJOS
+  { clave: "DIF.AL D.S. N 004-2018-TR INCR. RMV", valor: "DIF DS" },
+  { clave: "VAC OBR BONIFICACION CONSOLIDADA RM", valor: "BONIF CONSO" },
+  { clave: "BONIF. CONSOLIDADA R.M 075-99-EF", valor: "BONIF CONSO" },
+  { clave: "VAC EMP BONIFICACION CONSOLIDADA RM", valor: "BONIF CONSO" },
+
+  { clave: "ASIGNACION FAMILIAR LEY N 25129", valor: "ASI FAM" },
+  { clave: "VAC EMP ASIGNACION FAMILIAR LEY 25129", valor: "ASI FAM" },
+  { clave: "VAC OBR ASIGNACION FAMILIAR LEY 25129", valor: "ASI FAM" },
+
+  { clave: "BONIFICACION D.L 26504 3.3%", valor: "BONIF 3.3%" },
+  { clave: "VAC. EMP. D.L. 26504", valor: "BONIF 3.3%" },
+
+  { clave: "VAC EMP INC.AFP 10.23 %", valor: "INC. 10.23%" },
+  { clave: "BONIF. CONSOLIDADA R.M 075-99-EF", valor: "INC. 10.23%" },
+  { clave: "BONIF. CONSOLIDADA R.M 075-99-EF", valor: "INC. 10.23%" },
+  { clave: "VAC OBR INC AFP 10.23%", valor: "INC. 10.23%" },
+  { clave: "INC. AFP 10.23%", valor: "INC. 10.23%" },
+  { clave: "INC. AFP 10.23% OBR.", valor: "INC. 10.23%" },
+
+  { clave: "VAC EMP INC.AFP 3 %", valor: "INC. 3.0%" },
+  { clave: "INC. BONIF. DL. 25897 AFP 3%", valor: "INC BONIF 3.0%" },
+  { clave: "BONIF. CONSOLIDADA R.M 075-99-EF", valor: "INC. 3.0%" },
+  { clave: "BONIF. CONSOLIDADA R.M 075-99-EF", valor: "INC. 3.0%" },
+  { clave: "VAC OBR INC AFP 3%", valor: "INC. 3.0%" },
+  { clave: "INC. AFP 3% OBR.", valor: "INC. 3.0%" }
+];
